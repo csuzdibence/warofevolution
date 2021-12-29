@@ -1,0 +1,40 @@
+﻿<?xml version="1.0"?>
+<profiles>
+    <profile>
+        <name>defaultProfile</name>
+        <gold>0</gold>
+        <weapons>
+            <weapon type="ranged">
+                <wname>rock</wname>
+                <damage>10</damage>
+				<price>5</price>
+            </weapon>
+            <weapon type="melee">
+                <wname>stick</wname>
+                <damage>15</damage>
+				<price>10</price>
+            </weapon>
+        </weapons>
+    </profile>
+    <profile>
+        <name>Noel</name>
+        <gold>200</gold>
+        <weapons>
+           <weapon type="ranged">
+                <wname>bow</wname>
+                <damage>30</damage>
+				<price>50</price>
+            </weapon>
+            <weapon type="melee">
+                <wname>sword</wname>
+                <damage>2</damage>
+				<price>70</price>
+            </weapon>
+        </weapons>
+    </profile>
+    <profile>
+        <name>Bence</name>
+        <gold>200</gold>
+    </profile>
+
+</profiles>

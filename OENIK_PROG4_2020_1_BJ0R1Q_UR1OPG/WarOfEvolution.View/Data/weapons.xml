@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<weapons>
+	<weapon type="ranged" width="58" height="56" offsetX="100" offsetY="180">
+		<wname>rock</wname>
+		<damage>10</damage>
+		<price>20</price>
+		<level>1</level>
+		<image>rock.png</image>
+	</weapon>
+	<weapon type="melee" width="172" height="54" offsetX="0" offsetY="190">
+		<wname>stick</wname>
+		<damage>15</damage>
+		<price>30</price>
+		<level>1</level>
+		<image>stick.png</image>
+	</weapon>
+	<weapon type="melee" craftable="true" itemA="rock" itemB="stick" width="200" height="64" offsetX="0" offsetY="190">
+		<wname>spear</wname>
+		<damage>30</damage>
+		<price>50</price>
+		<level>1</level>
+		<image>spear.png</image>
+	</weapon>
+	<weapon type="melee" craftable="true" itemA="sword" itemB="spear" width="126" height="83" offsetX="110" offsetY="145">
+		<wname>blade</wname>
+		<damage>70</damage>
+		<price>130</price>
+		<level>2</level>
+		<image>blade.png</image>
+	</weapon>
+	<weapon type="melee" width="91" height="37" offsetX="100" offsetY="190">
+		<wname>sword</wname>
+		<damage>50</damage>
+		<price>80</price>
+		<level>2</level>
+		<image>sword.png</image>
+	</weapon>
+	<weapon type="ranged" width="69" height="67" offsetX="100" offsetY="180">
+		<wname>molotov cocktail</wname>
+		<damage>120</damage>
+		<price>150</price>
+		<level>3</level>
+		<image>molotov_cocktail.png</image>
+	</weapon>
+	<weapon type="ranged" width="64" height="64" offsetX="100" offsetY="180">
+		<wname>grenade</wname>
+		<damage>200</damage>
+		<price>300</price>
+		<level>3</level>
+		<image>grenade.png</image>
+	</weapon>
+</weapons>

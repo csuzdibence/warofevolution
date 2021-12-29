@@ -1,0 +1,182 @@
+﻿<Page x:Class="WarOfEvolution.View.Shop"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WarOfEvolution.View"
+      xmlns:vm="clr-namespace:WarOfEvolution.View.VM"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Shop">
+    <Page.Resources>
+        <vm:ShopViewModel x:Key="ShopVM"/>
+        <Style TargetType="Button">
+            <Setter Property="Height" Value="100"></Setter>
+            <Setter Property="Width" Value="200"></Setter>
+            <Setter Property="Margin" Value="10"></Setter>
+            <Setter Property="FontSize" Value="40"></Setter>
+            <Setter Property="Background" Value="Azure"></Setter>
+            <Setter Property="Foreground" Value="#3b80c2"></Setter>
+            <Setter Property="Foreground" Value="#3b80c2"></Setter>
+            <Setter Property="BorderThickness" Value="3"></Setter>
+            <Setter Property="BorderBrush" Value="Black"></Setter>
+            <Setter Property="Opacity" Value="0.8"></Setter>
+            <Setter Property="FontFamily" Value="Segoe UI Black"></Setter>
+        </Style>
+        <Style TargetType="Label">
+            <Setter Property="Foreground" Value="#3b80c2"></Setter>
+            <Setter Property="FontSize" Value="20" />
+            <Setter Property="FontWeight" Value="ExtraBold" />
+        </Style>
+    </Page.Resources>
+    <Grid Width="1920" Height="1080" DataContext="{StaticResource ShopVM}">
+        <Grid.Background>
+            <ImageBrush ImageSource="mainwindow_bg.jpg"/>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"></RowDefinition>
+            <RowDefinition Height="4*"></RowDefinition>
+            <RowDefinition Height="2*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <StackPanel Orientation="Horizontal" Grid.Column="0">
+                <Button Command="{Binding BackToMainCommand}" Content="Back"></Button>
+            </StackPanel>
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1">
+                <Label Margin="100 0 0 0" FontSize="50" VerticalAlignment="Center" FontWeight="ExtraBold" Content="SHOP"></Label>
+                <Image Source="/Pictures/logo-1.png" Width="324" />
+            </StackPanel>
+            <StackPanel Margin="0 50 50 50" HorizontalAlignment="Right" Grid.Column="2" Background="#FF513A3A">
+                <Label Padding="10" ContentStringFormat="Profile: {0}" Content="{Binding Profile.Name}"></Label>
+                <Label Padding="10" ContentStringFormat="Gold: {0}" Content="{Binding Profile.NumOfGolds}"></Label>
+                <Label Padding="10" ContentStringFormat="Current Level: {0}" Content="{Binding Profile.CompletedLevels}"></Label>
+            </StackPanel>
+        </Grid>
+        <StackPanel Grid.Row="1">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <!-- Profile's weapons -->
+                <StackPanel Margin="50 0 50 0" Background="#FF513A3A" Grid.Column="0">
+                    <Label Background="#FF464141" Content="INVENTORY"></Label>
+                    <Grid HorizontalAlignment="Stretch" VerticalAlignment="Center">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*"></ColumnDefinition>
+                            <ColumnDefinition Width="1*"></ColumnDefinition>
+                            <ColumnDefinition Width="1*"></ColumnDefinition>
+                            <ColumnDefinition Width="1*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Label HorizontalAlignment="Center" Grid.Column="0" Content="Name"></Label>
+                        <Label HorizontalAlignment="Center" Grid.Column="1" Content="Damage"></Label>
+                        <Label HorizontalAlignment="Center" Grid.Column="2" Content="Required Levels"></Label>
+                        <Label HorizontalAlignment="Center" Grid.Column="3" Content="Price"></Label>
+                    </Grid>
+                    <ListBox Height="300" Background="#FF513A3A" HorizontalContentAlignment="Stretch"  ItemsSource="{Binding WeaponsOfProfile}" SelectedItem="{Binding InventoryWeapon}" BorderBrush="{x:Null}">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="1*"></ColumnDefinition>
+                                        <ColumnDefinition Width="1*"></ColumnDefinition>
+                                        <ColumnDefinition Width="1*"></ColumnDefinition>
+                                        <ColumnDefinition Width="1*"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <Label HorizontalAlignment="Center" Grid.Column="0" Content="{Binding Name}"></Label>
+                                    <Label HorizontalAlignment="Center" Grid.Column="1" Content="{Binding Damage}"></Label>
+                                    <Label HorizontalAlignment="Center" Grid.Column="2" Content="{Binding LevelRequired}"></Label>
+                                    <Label HorizontalAlignment="Center" Grid.Column="3" Content="{Binding Price}"></Label>
+                                </Grid>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                    <Label HorizontalAlignment="Center" Content=""></Label>
+                    <Button Command="{Binding SellWeaponCommand}" FontSize="25" Height="50" Width="200" Content="Sell"></Button>
+                </StackPanel>
+                <!-- All weapons -->
+                <StackPanel Margin="50 0 50 0" Grid.Column="1" Background="#FF513A3A">
+                    <Label Background="#FF464141" Content="SHOP"></Label>
+                    <Grid HorizontalAlignment="Stretch" VerticalAlignment="Center">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*"></ColumnDefinition>
+                            <ColumnDefinition Width="1*"></ColumnDefinition>
+                            <ColumnDefinition Width="1*"></ColumnDefinition>
+                            <ColumnDefinition Width="1*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Label HorizontalAlignment="Center" Grid.Column="0" Content="Name"></Label>
+                        <Label HorizontalAlignment="Center" Grid.Column="1" Content="Damage"></Label>
+                        <Label HorizontalAlignment="Center" Grid.Column="2" Content="Required Levels"></Label>
+                        <Label HorizontalAlignment="Center" Grid.Column="3" Content="Price"></Label>
+                    </Grid>
+                    <ListBox Height="300" Background="#FF513A3A" HorizontalContentAlignment="Stretch"  ItemsSource="{Binding AllWeapons}" SelectedItem="{Binding SelectedWeapon}" BorderBrush="{x:Null}">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="1*"></ColumnDefinition>
+                                        <ColumnDefinition Width="1*"></ColumnDefinition>
+                                        <ColumnDefinition Width="1*"></ColumnDefinition>
+                                        <ColumnDefinition Width="1*"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <Label HorizontalAlignment="Center" Grid.Column="0" Content="{Binding Name}"></Label>
+                                    <Label HorizontalAlignment="Center" Grid.Column="1" Content="{Binding Damage}"></Label>
+                                    <Label HorizontalAlignment="Center" Grid.Column="2" Content="{Binding LevelRequired}"></Label>
+                                    <Label HorizontalAlignment="Center" Grid.Column="3" Content="{Binding Price}"></Label>
+                                </Grid>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                    <Label HorizontalAlignment="Center" Foreground="IndianRed" Content="{Binding BuyMessage}"></Label>
+                    <Button Command="{Binding BuyWeaponCommand}" FontSize="25" Height="50" Width="200" Content="Purchase"></Button>
+                </StackPanel>
+                
+            </Grid>
+        </StackPanel>
+        <StackPanel Grid.Row="2">
+            <StackPanel Margin="50 0 50 0" Background="#FF513A3A" Grid.Column="0">
+                <Label Background="#FF464141" Content="CRAFT"></Label>
+                <Grid HorizontalAlignment="Stretch" VerticalAlignment="Center">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"></ColumnDefinition>
+                        <ColumnDefinition Width="1*"></ColumnDefinition>
+                        <ColumnDefinition Width="1*"></ColumnDefinition>
+                        <ColumnDefinition Width="1*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Label HorizontalAlignment="Center" Grid.Column="0" Content="Name"></Label>
+                    <Label HorizontalAlignment="Center" Grid.Column="1" Content="Damage"></Label>
+                    <Label HorizontalAlignment="Center" Grid.Column="2" Content="Required Levels"></Label>
+                    <Label HorizontalAlignment="Center" Grid.Column="3" Content="Price"></Label>
+                </Grid>
+                <ListBox Height="100" Background="#FF513A3A" HorizontalContentAlignment="Stretch"  ItemsSource="{Binding CraftableWeapons}" SelectedItem="{Binding SelectedCraftableWeapon}" BorderBrush="{x:Null}">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <Label HorizontalAlignment="Center" Grid.Column="0" Content="{Binding Name}"></Label>
+                                <Label HorizontalAlignment="Center" Grid.Column="1" Content="{Binding Damage}"></Label>
+                                <Label HorizontalAlignment="Center" Grid.Column="2" Content="{Binding LevelRequired}"></Label>
+                                <Label HorizontalAlignment="Center" Grid.Column="3" Content="{Binding Price}"></Label>
+                            </Grid>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+                
+                <StackPanel Orientation="Horizontal">                    
+                    <Button Command="{Binding CraftWeaponCommand}" FontSize="25" Height="50" Width="200" Content="Craft"></Button>
+                    <Label Content="{Binding CraftMessage}" Foreground="IndianRed" HorizontalAlignment="Center"></Label>
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Page>

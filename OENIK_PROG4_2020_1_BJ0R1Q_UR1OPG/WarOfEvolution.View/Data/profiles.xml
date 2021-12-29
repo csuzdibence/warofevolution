@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<profiles>
+  <profile>
+    <name>defaultProfile</name>
+    <gold>150</gold>
+    <profilelevel>2</profilelevel>
+    <weapon type="ranged">
+      <wname>rock</wname>
+      <damage>10</damage>
+      <price>20</price>
+      <level>0</level>
+    </weapon>
+    <weapon type="melee">
+      <wname>stick</wname>
+      <damage>15</damage>
+      <price>30</price>
+      <level>0</level>
+    </weapon>
+  </profile>
+  <profile>
+    <name>Noel</name>
+    <gold>162</gold>
+    <profilelevel>2</profilelevel>
+    <weapon type="ranged">
+      <wname>rock</wname>
+      <damage>10</damage>
+      <price>20</price>
+      <level>0</level>
+    </weapon>
+    <weapon type="melee">
+      <wname>stick</wname>
+      <damage>15</damage>
+      <price>30</price>
+      <level>0</level>
+    </weapon>
+  </profile>
+  <profile>
+    <name>Bence</name>
+    <gold>877</gold>
+    <profilelevel>4</profilelevel>
+    <weapon type="ranged">
+      <wname>rock</wname>
+      <damage>10</damage>
+      <price>20</price>
+      <level>0</level>
+    </weapon>
+    <weapon type="melee">
+      <wname>stick</wname>
+      <damage>15</damage>
+      <price>30</price>
+      <level>0</level>
+    </weapon>
+  </profile>
+</profiles>
