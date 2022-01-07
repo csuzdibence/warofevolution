@@ -1,7 +1,0 @@
-var searchData=
-[
-  ['health',['Health',['../class_war_of_evolution_1_1_model_1_1_enemy.html#ab3b71c654931f9462b680103f307a532',1,'WarOfEvolution.Model.Enemy.Health()'],['../class_war_of_evolution_1_1_model_1_1_player.html#a784de3da41c8ee292cdeb29e96bf57c3',1,'WarOfEvolution.Model.Player.Health()']]],
-  ['highscore',['Highscore',['../class_war_of_evolution_1_1_view_1_1_highscore.html',1,'WarOfEvolution.View.Highscore'],['../class_war_of_evolution_1_1_model_1_1_score.html#ae0c5091611b998cf191bd71d3f2f2723',1,'WarOfEvolution.Model.Score.Highscore()'],['../class_war_of_evolution_1_1_view_1_1_highscore.html#a5403bb6321545869b364e2d98ed45a73',1,'WarOfEvolution.View.Highscore.Highscore()'],['../class_war_of_evolution_1_1_view_1_1_highscore.html#a9b8edea7d251185b0a582717de6652cc',1,'WarOfEvolution.View.Highscore.Highscore(MyProfile profile, Page lastPage)']]],
-  ['highscores',['Highscores',['../class_war_of_evolution_1_1_view_1_1_v_m_1_1_highscore_view_model.html#a89c3800a55d07c135ce71ef67dd4d671',1,'WarOfEvolution::View::VM::HighscoreViewModel']]],
-  ['highscoreviewmodel',['HighscoreViewModel',['../class_war_of_evolution_1_1_view_1_1_v_m_1_1_highscore_view_model.html',1,'WarOfEvolution.View.VM.HighscoreViewModel'],['../class_war_of_evolution_1_1_view_1_1_v_m_1_1_highscore_view_model.html#a736c4925a915906396b98be27c2a0954',1,'WarOfEvolution.View.VM.HighscoreViewModel.HighscoreViewModel()']]]
-];

@@ -1,4 +1,0 @@
-var dir_ef549bc0c7e184c7624826e0725f67eb =
-[
-    [ "OENIK_PROG4_2020_1_BJ0R1Q_UR1OPG", "dir_1567d2168c85bfd9d377ce26c4887bd4.html", "dir_1567d2168c85bfd9d377ce26c4887bd4" ]
-];

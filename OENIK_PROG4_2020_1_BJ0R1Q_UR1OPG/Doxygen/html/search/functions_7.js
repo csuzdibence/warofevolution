@@ -1,9 +1,0 @@
-var searchData=
-[
-  ['level',['Level',['../class_war_of_evolution_1_1_model_1_1_level.html#a6343a4ac914339a95e05ebfd2c701c7d',1,'WarOfEvolution::Model::Level']]],
-  ['listalllevelinfos',['ListAllLevelInfos',['../class_war_of_evolution_1_1_logic_1_1_menu_logic.html#a06e991501ef271d58d535d49ee053f58',1,'WarOfEvolution::Logic::MenuLogic']]],
-  ['listallprofiles',['ListAllProfiles',['../interface_war_of_evolution_1_1_logic_1_1_i_menu_logic.html#aeeba5a556da6cacf36bd20abe3ce404d',1,'WarOfEvolution.Logic.IMenuLogic.ListAllProfiles()'],['../class_war_of_evolution_1_1_logic_1_1_menu_logic.html#a85eb1063f26ccf46ed63244970dfe581',1,'WarOfEvolution.Logic.MenuLogic.ListAllProfiles()']]],
-  ['listallweapons',['ListAllWeapons',['../class_war_of_evolution_1_1_logic_1_1_menu_logic.html#a503ba6819aa8d024075f4eb9ba47bbd1',1,'WarOfEvolution::Logic::MenuLogic']]],
-  ['loaddata',['LoadData',['../interface_war_of_evolution_1_1_repository_1_1_i_repository.html#abf1f3efa8d06acb97b377ed17482ea87',1,'WarOfEvolution.Repository.IRepository.LoadData()'],['../class_war_of_evolution_1_1_repository_1_1_profile_repository.html#a41807b1629884acf89bd83f90430737e',1,'WarOfEvolution.Repository.ProfileRepository.LoadData()'],['../class_war_of_evolution_1_1_repository_1_1_weapon_repository.html#a032609ee48ab8ce8693056c385009305',1,'WarOfEvolution.Repository.WeaponRepository.LoadData()']]],
-  ['loadgamemodel',['LoadGameModel',['../class_war_of_evolution_1_1_logic_1_1_game_logic.html#aad7895837206d3c362aeddc1e73c1bb8',1,'WarOfEvolution.Logic.GameLogic.LoadGameModel()'],['../class_war_of_evolution_1_1_repository_1_1_game_model_repository.html#adfddc6171a181e4719c6548312733d98',1,'WarOfEvolution.Repository.GameModelRepository.LoadGameModel()'],['../interface_war_of_evolution_1_1_repository_1_1_i_game_model_repository.html#a605d62badb91a2648212c129cbac7719',1,'WarOfEvolution.Repository.IGameModelRepository.LoadGameModel()']]]
-];
